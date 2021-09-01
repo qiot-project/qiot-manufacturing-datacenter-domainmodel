@@ -6,7 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
- * 
+ * @author andreabattaglia
+ *
  */
 @RegisterForReflection
 public class RegisterResponse {
