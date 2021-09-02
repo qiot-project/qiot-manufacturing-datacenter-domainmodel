@@ -17,10 +17,6 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 @RegisterForReflection
 public class FactoryRegisterRequest {
 
-    @JsonProperty(value = "factoryId")
-    @NotNull
-    public UUID factoryId;
-
     @JsonProperty(value = "serial")
     @NotNull
     public String serial;
@@ -40,9 +36,7 @@ public class FactoryRegisterRequest {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("FactoryRegisterRequest [factoryId=");
-        builder.append(factoryId);
-        builder.append(", serial=");
+        builder.append("FactoryRegisterRequest [serial=");
         builder.append(serial);
         builder.append(", name=");
         builder.append(name);
