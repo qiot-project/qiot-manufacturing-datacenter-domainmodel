@@ -6,7 +6,6 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.qiot.manufacturing.all.commons.domain.registration.MachineryRegisterRequest;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
@@ -14,7 +13,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
  *
  */
 @RegisterForReflection
-public class MachineryCertificateRequest extends MachineryRegisterRequest {
+public class MachineryCertificateRequest extends MachinerySubscriptionRequest {
 
     @JsonProperty(value = "machineryId")
     @NotNull

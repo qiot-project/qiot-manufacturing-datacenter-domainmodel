@@ -16,7 +16,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
  *
  */
 @RegisterForReflection
-public class FactoryCertificateRequest extends FactoryRegisterRequest {
+public class FactoryCertificateRequest extends FactorySubscriptionRequest {
 
     @JsonProperty(value = "factoryId")
     @NotNull

@@ -1,42 +1,30 @@
-
 package io.qiot.manufacturing.datacenter.commons.domain.registration;
 
 import java.util.UUID;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
- * Root Type for RegisterRequest
- * <p>
+ * @author andreabattaglia
+ *
  */
 @RegisterForReflection
-public class FactoryRegisterRequest {
+public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
 
-    @JsonProperty(value = "serial")
+    @JsonProperty(value = "factoryId")
     @NotNull
-    public String serial;
-    
-    @JsonProperty(value = "name")
-    @NotNull
-    @Pattern(regexp = "[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*")
-    public String name;
-    
-    /**
-     * KeyStore Password
-     * 
-     */
-    @JsonProperty("keyStorePassword")
-    public String keyStorePassword;
+    public UUID factoryId;
 
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("FactoryRegisterRequest [serial=");
+        builder.append("MachinerySubscriptionRequest [factoryId=");
+        builder.append(factoryId);
+        builder.append(", serial=");
         builder.append(serial);
         builder.append(", name=");
         builder.append(name);
@@ -45,7 +33,6 @@ public class FactoryRegisterRequest {
         builder.append("]");
         return builder.toString();
     }
-
 
     
 }
