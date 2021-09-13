@@ -1,4 +1,4 @@
-package io.qiot.manufacturing.datacenter.commons.domain.events;
+package io.qiot.manufacturing.datacenter.commons.domain.telemetry;
 
 import java.util.UUID;
 

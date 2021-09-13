@@ -1,12 +1,10 @@
 /**
  * 
  */
-package io.qiot.manufacturing.datacenter.commons.domain.events.production;
-
-import java.util.UUID;
+package io.qiot.manufacturing.datacenter.commons.domain.telemetry.production;
 
 import io.qiot.manufacturing.all.commons.domain.production.ProductionChainStageEnum;
-import io.qiot.manufacturing.datacenter.commons.domain.events.AbstractProductionValidationTelemetryDTO;
+import io.qiot.manufacturing.datacenter.commons.domain.telemetry.AbstractProductionValidationTelemetryDTO;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
 /**
@@ -17,7 +15,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 public class StageProductionValidationTelemetryDTO
         extends AbstractProductionValidationTelemetryDTO {
 
-    public UUID itemId;
+    public int itemId;
     public ProductionChainStageEnum stage;
     public boolean success;
     
