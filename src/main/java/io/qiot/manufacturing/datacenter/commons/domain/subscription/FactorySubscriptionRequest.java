@@ -1,5 +1,5 @@
 
-package io.qiot.manufacturing.datacenter.commons.domain.registration;
+package io.qiot.manufacturing.datacenter.commons.domain.subscription;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
