@@ -1,5 +1,6 @@
 package io.qiot.manufacturing.datacenter.commons.domain.subscription;
 
+import java.time.Instant;
 import java.util.UUID;
 
 import javax.validation.constraints.NotNull;
@@ -18,6 +19,9 @@ public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
     @JsonProperty(value = "factoryId")
     @NotNull
     public UUID factoryId;
+    @JsonProperty("subscribed_on")
+    @NotNull
+    public Instant subscribedOn;
 
     @Override
     public String toString() {
@@ -30,9 +34,10 @@ public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
         builder.append(name);
         builder.append(", keyStorePassword=");
         builder.append(keyStorePassword);
+        builder.append(", subscribedOn=");
+        builder.append(subscribedOn);
         builder.append("]");
         return builder.toString();
     }
 
-    
 }
