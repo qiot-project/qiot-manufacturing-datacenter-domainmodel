@@ -18,6 +18,9 @@ public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
 
     @JsonProperty(value = "factoryId")
     @NotNull
+    public UUID id;
+    @JsonProperty(value = "factoryId")
+    @NotNull
     public UUID factoryId;
     @JsonProperty("subscribed_on")
     @NotNull
@@ -28,6 +31,8 @@ public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
         StringBuilder builder = new StringBuilder();
         builder.append("MachinerySubscriptionRequest [factoryId=");
         builder.append(factoryId);
+        builder.append(", id=");
+        builder.append(id);
         builder.append(", serial=");
         builder.append(serial);
         builder.append(", name=");
