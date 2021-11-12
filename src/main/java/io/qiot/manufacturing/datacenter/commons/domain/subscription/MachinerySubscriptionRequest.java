@@ -16,7 +16,7 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 @RegisterForReflection
 public class MachinerySubscriptionRequest extends ServerSubscriptionRequest {
 
-    @JsonProperty(value = "factoryId")
+    @JsonProperty(value = "id")
     @NotNull
     public UUID id;
     @JsonProperty(value = "factoryId")
